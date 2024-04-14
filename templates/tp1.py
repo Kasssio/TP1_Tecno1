@@ -35,20 +35,24 @@ while not finalizar:
     # Se analiza la opción elegida
     if opcion_seleccionada == 'A':
         n_str:str = input('Ingrese n: ')
-        # [COMPLETAR]
-
+        m_str:str = input('Ingrese m: ')
+        print(distancia_binaria(int(n_str),int(m_str)))
     elif opcion_seleccionada == 'B':
         n_str:str = input('Ingrese n: ')
-        # [COMPLETAR]
+        m_str:str = input('Ingrese m: ')
+        
 
     elif opcion_seleccionada == 'C':
         # [COMPLETAR]
+        pass #para que no tire error cuando esté vacío
 
     elif opcion_seleccionada == 'D':
         # [COMPLETAR]
+        pass #para que no tire error cuando esté vacío
 
     elif opcion_seleccionada == 'E':
         # [COMPLETAR]
+        pass #para que no tire error cuando esté vacío
 
     elif opcion_seleccionada == 'F':
         finalizar = True
@@ -58,3 +62,4 @@ while not finalizar:
 
     if opcion_seleccionada != 'F':
         input('Presione ENTER para continuar.')
+
