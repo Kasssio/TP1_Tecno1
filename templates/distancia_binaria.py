@@ -19,9 +19,6 @@ def distancia_binaria(n:int, m:int) -> int:
         i += 1
     return distance
 
-print(distancia_binaria(12,32))
-
-
 def son_aledaños(n:int, m:int) -> bool:
     '''
     Requiere: n y m > 0.
@@ -30,7 +27,7 @@ def son_aledaños(n:int, m:int) -> bool:
     isVecinos:bool = False
     distance:int = distancia_binaria(n,m)
 
-    if distance != 1: isVecinos = False
+    if distance != 1 or distance == 0: isVecinos = False
     else: isVecinos = True
     return isVecinos
 
@@ -39,10 +36,21 @@ def son_aledaños(n:int, m:int) -> bool:
 
 def aledaños_menores(n:int) -> list[int]:
     '''
-    completar docstring
+    Requiere: n > 0.
+    Devuelve: una lista de los vecinos binarios aledaños de n.
     '''
+    i:int = 1
+    total:list[int] = []
+    while i < n:
+        temp:bool = son_aledaños(n,i)
+        if(temp == True):
+            total.append(i)
+        i += 1
+    return total
+    # creamos un while que por cada intervalo, mientras i sea menor a n, use la funcion son_aledaños() entre n e i para confirmar que sean vecinos. 
+    # si se cumple esto, appendear el valor de i en ese intervalo a la lista. 
 
-
+aledaños_menores(16)
 def cant_aledaños(n:int, a:int, b:int) -> int:
     '''
     completar docstring

@@ -61,8 +61,13 @@ while not finalizar:
         
 
     elif opcion_seleccionada == 'C':
-        # [COMPLETAR]
-        pass #para que no tire error cuando esté vacío
+        n_str:str = input('Ingrese n: ')
+        n_int:int = int(n_str)
+        func = aledaños_menores(n_int)
+        if func != []:
+            print('Los números ' + str(func) + ' son vecinos aledaños de ' + n_str + ' menores a ' + n_str)
+        else:
+            print('El número ' + n_str + ' no tiene vecinos aledaños menores')
 
     elif opcion_seleccionada == 'D':
         # [COMPLETAR]
