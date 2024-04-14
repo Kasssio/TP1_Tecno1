@@ -36,7 +36,8 @@ while not finalizar:
     if opcion_seleccionada == 'A':
         n_str:str = input('Ingrese n: ')
         m_str:str = input('Ingrese m: ')
-        print(distancia_binaria(int(n_str),int(m_str)))
+        hola = str(distancia_binaria(int(n_str),int(m_str)))
+        print('La distancia binaria entre ' + n_str + ' y ' + m_str + ' es ' + hola)
     elif opcion_seleccionada == 'B':
         n_str:str = input('Ingrese n: ')
         m_str:str = input('Ingrese m: ')
