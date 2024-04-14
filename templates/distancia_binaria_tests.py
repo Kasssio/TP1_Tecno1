@@ -9,10 +9,10 @@ from distancia_binaria import distancia_binaria, son_aledaños, \
 class TestVecinosBinarios(unittest.TestCase):
     ## ATENCION: los nombres de estas funciones deben empezar con test_
 
-    def test_...(self):
+    def test_distancia_binaria(self):
         ...
 
-    def test_...(self):
+    def test_son_aledaños(self):
         ...
 
 ## y asi con el resto de las funciones a testear.

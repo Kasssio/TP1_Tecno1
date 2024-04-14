@@ -36,11 +36,28 @@ while not finalizar:
     if opcion_seleccionada == 'A':
         n_str:str = input('Ingrese n: ')
         m_str:str = input('Ingrese m: ')
-        hola = str(distancia_binaria(int(n_str),int(m_str)))
-        print('La distancia binaria entre ' + n_str + ' y ' + m_str + ' es ' + hola)
+
+        n_int:int = int(n_str)
+        m_int:int = int(m_str)
+
+        func = str(distancia_binaria(n_int,m_int))
+
+        print('La distancia binaria entre ' + n_str + ' y ' + m_str + ' es ' + func)
     elif opcion_seleccionada == 'B':
         n_str:str = input('Ingrese n: ')
         m_str:str = input('Ingrese m: ')
+
+        n_int:int = int(n_str)
+        m_int:int = int(m_str)
+
+        func = son_aledaños(n_int,m_int)
+
+        if(func == True): 
+            print('Los números ' + n_str + ' y ' + m_str + ' son vecinos binarios aledaños')
+        else: 
+            print('Los números ' + n_str + ' y ' + m_str + ' no son vecinos binarios aledaños')
+
+
         
 
     elif opcion_seleccionada == 'C':
