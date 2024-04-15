@@ -31,9 +31,6 @@ def son_aledaños(n:int, m:int) -> bool:
     else: isVecinos = True
     return isVecinos
 
-        
-
-
 def aledaños_menores(n:int) -> list[int]:
     '''
     Requiere: n > 0.
@@ -72,8 +69,9 @@ def densidad_intervalo(n:int, a:int, b:int) -> float:
     Devuelve: El cociente entre la cantidad de vecinos aledaños a n en [a,b] y la cantidad de enteros en [a,b]
     '''
     vecinos:int = cant_aledaños(n,a,b)
-    enteros:int = b - a # se suma 2 o no? se incluyen los extremos?
+    enteros:int = b - a + 1 # se suma 2 o no? se incluyen los extremos?
     res:float = vecinos / enteros
-    res = round(res,6)
+    res = round(res,5)
     return res
 
+print(densidad_intervalo(64,1,63))

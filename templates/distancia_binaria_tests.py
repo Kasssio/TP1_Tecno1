@@ -7,14 +7,30 @@ from distancia_binaria import distancia_binaria, son_aledaños, \
 #####################################################################
 
 class TestVecinosBinarios(unittest.TestCase):
-    ## ATENCION: los nombres de estas funciones deben empezar con test_
-
+    
     def test_distancia_binaria(self):
-        ...
+        self.assertEqual(distancia_binaria(6,18),2)
+        self.assertEqual(distancia_binaria(12,12),0)
+        self.assertEqual(distancia_binaria(14,3),3)
 
     def test_son_aledaños(self):
-        ...
+        self.assertEqual(son_aledaños(14,3),False)
+        self.assertEqual(son_aledaños(1,3),True)
 
-## y asi con el resto de las funciones a testear.
+
+    def test_aledaños_menores(self):
+        self.assertEqual(aledaños_menores(127),[63, 95, 111, 119, 123, 125, 126])
+        self.assertEqual(aledaños_menores(64),[])
+
+    def test_cant_aledaños(self):
+        self.assertEqual(cant_aledaños(10,8,13),2)
+        self.assertEqual(cant_aledaños(64,1,63),0)
+
+
+    def test_densidad_intervalo(self):
+        self.assertEqual(densidad_intervalo(10,8,13),0.33333)
+        self.assertEqual(densidad_intervalo(64,1,63),0.0)
+
+
 
 unittest.main()
