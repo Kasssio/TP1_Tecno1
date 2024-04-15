@@ -50,15 +50,30 @@ def aledaños_menores(n:int) -> list[int]:
     # creamos un while que por cada intervalo, mientras i sea menor a n, use la funcion son_aledaños() entre n e i para confirmar que sean vecinos. 
     # si se cumple esto, appendear el valor de i en ese intervalo a la lista. 
 
-aledaños_menores(16)
+
 def cant_aledaños(n:int, a:int, b:int) -> int:
     '''
-    completar docstring
+    Requiere: n,a,b > 0.
+    Devuelve: La cantidad de vecinos aledaños entre n y los números en el intervalo [a,b].
     '''
 
+    i:int = a
+    cant:int = 0
+    while i <= b:
+        check:bool = son_aledaños(i,n)
+        if check:
+            cant += 1
+        i += 1
+    return cant
 
 def densidad_intervalo(n:int, a:int, b:int) -> float:
     '''
-    completar docstring
+    Requiere: n,a,b > 0.
+    Devuelve: El cociente entre la cantidad de vecinos aledaños a n en [a,b] y la cantidad de enteros en [a,b]
     '''
+    vecinos:int = cant_aledaños(n,a,b)
+    enteros:int = b - a # se suma 2 o no? se incluyen los extremos?
+    res:float = vecinos / enteros
+    res = round(res,6)
+    return res
 

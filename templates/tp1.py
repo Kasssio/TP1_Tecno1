@@ -70,12 +70,18 @@ while not finalizar:
             print('El número ' + n_str + ' no tiene vecinos aledaños menores')
 
     elif opcion_seleccionada == 'D':
-        # [COMPLETAR]
-        pass #para que no tire error cuando esté vacío
+        n:int = int(input('Ingrese n: '))
+        a:int = int(input('Ingrese a: '))
+        b:int = int(input('Ingrese b: '))
+        func = cant_aledaños(n,a,b)
+        print(str(func) + ' números en [' + str(a) + ',' + str(b) + '] son aledaños a ' + str(n))
 
     elif opcion_seleccionada == 'E':
-        # [COMPLETAR]
-        pass #para que no tire error cuando esté vacío
+        n:int = int(input('Ingrese n: '))
+        a:int = int(input('Ingrese a: '))
+        b:int = int(input('Ingrese b: '))
+        func = densidad_intervalo(n,a,b)
+        print('La densidad binaria de ' + str(n) + ' en [' + str(a) + ',' + str(b) + '] es aproximadamente ' + str(func))
 
     elif opcion_seleccionada == 'F':
         finalizar = True
