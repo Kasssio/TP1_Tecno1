@@ -10,12 +10,20 @@ class TestVecinosBinarios(unittest.TestCase):
     
     def test_distancia_binaria(self):
         self.assertEqual(distancia_binaria(6,18),2)
+        self.assertEqual(distancia_binaria(1,100),4)
         self.assertEqual(distancia_binaria(12,12),0)
+        self.assertEqual(distancia_binaria(50,50),0)
         self.assertEqual(distancia_binaria(14,3),3)
+        self.assertEqual(distancia_binaria(100,1),4)
 
     def test_son_aledaños(self):
         self.assertEqual(son_aledaños(14,3),False)
-        self.assertEqual(son_aledaños(1,3),True)
+        self.assertEqual(son_aledaños(1,100),False)
+        self.assertEqual(son_aledaños(3,3),False)
+        self.assertEqual(son_aledaños(50,51),True)
+        self.assertEqual(son_aledaños(3,2),True)
+        self.assertEqual(son_aledaños(5,4),True)
+
 
 
     def test_aledaños_menores(self):
