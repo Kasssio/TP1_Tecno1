@@ -24,15 +24,20 @@ class TestVecinosBinarios(unittest.TestCase):
         self.assertEqual(son_aledaños(3,2),True)
         self.assertEqual(son_aledaños(5,4),True)
 
-
-
     def test_aledaños_menores(self):
         self.assertEqual(aledaños_menores(127),[63, 95, 111, 119, 123, 125, 126])
         self.assertEqual(aledaños_menores(64),[])
+        self.assertEqual(aledaños_menores(0),[])
+        self.assertEqual(aledaños_menores(1),[])
+        self.assertEqual(aledaños_menores(10),[2, 8])
+        self.assertEqual(aledaños_menores(100),[36, 68, 96])
+
 
     def test_cant_aledaños(self):
         self.assertEqual(cant_aledaños(10,8,13),2)
         self.assertEqual(cant_aledaños(64,1,63),0)
+        self.assertEqual(cant_aledaños(10,1,100),7)
+        self.assertEqual(cant_aledaños(10,100,1),0)
 
 
     def test_densidad_intervalo(self):
