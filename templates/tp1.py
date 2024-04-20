@@ -57,9 +57,6 @@ while not finalizar:
         else: 
             print('Los números ' + n_str + ' y ' + m_str + ' no son vecinos binarios aledaños')
 
-
-        
-
     elif opcion_seleccionada == 'C':
         n_str:str = input('Ingrese n: ')
         n_int:int = int(n_str)

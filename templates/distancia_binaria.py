@@ -47,7 +47,6 @@ def aledaños_menores(n:int) -> list[int]:
     # creamos un while que por cada intervalo, mientras i sea menor a n, use la funcion son_aledaños() entre n e i para confirmar que sean vecinos. 
     # si se cumple esto, appendear el valor de i en ese intervalo a la lista. 
 
-
 def cant_aledaños(n:int, a:int, b:int) -> int:
     '''
     Requiere: n,a,b > 0.

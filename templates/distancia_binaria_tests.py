@@ -6,8 +6,7 @@ from distancia_binaria import distancia_binaria, son_aledaños, \
 
 #####################################################################
 
-class TestVecinosBinarios(unittest.TestCase):
-    
+class TestVecinosBinarios(unittest.TestCase):  
     def test_distancia_binaria(self):
         self.assertEqual(distancia_binaria(6,18),2)
         self.assertEqual(distancia_binaria(1,100),4)
@@ -32,18 +31,14 @@ class TestVecinosBinarios(unittest.TestCase):
         self.assertEqual(aledaños_menores(10),[2, 8])
         self.assertEqual(aledaños_menores(100),[36, 68, 96])
 
-
     def test_cant_aledaños(self):
         self.assertEqual(cant_aledaños(10,8,13),2)
         self.assertEqual(cant_aledaños(64,1,63),0)
         self.assertEqual(cant_aledaños(10,1,100),7)
         self.assertEqual(cant_aledaños(10,100,1),0)
 
-
     def test_densidad_intervalo(self):
         self.assertEqual(densidad_intervalo(10,8,13),0.33333)
         self.assertEqual(densidad_intervalo(64,1,63),0.0)
-
-
 
 unittest.main()
