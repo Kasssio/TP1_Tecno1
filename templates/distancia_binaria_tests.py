@@ -40,6 +40,7 @@ class TestVecinosBinarios(unittest.TestCase):
     def test_densidad_intervalo(self):
         self.assertEqual(densidad_intervalo(10,8,13),0.33333)
         self.assertEqual(densidad_intervalo(64,1,63),0.0)
+        self.assertEqual(densidad_intervalo(128,1,126),0.0)
         self.assertEqual(densidad_intervalo(100,50,100),0.03922)
         self.assertEqual(densidad_intervalo(50,20,80),0.09804)
  
