@@ -8,7 +8,7 @@ def distancia_binaria(n:int, m:int) -> int:
     bin_n:str = bin(n).replace('0b','')
     bin_m:str = bin(m).replace('0b','')
 
-    if len(bin_n) < len(bin_m):
+    if len(bin_n) < len(bin_m): # Este condicional existe para igualar la longitud de n y m, así sacamos la verdadera distancia.
         bin_n = ('0' * (len(bin_m) - len(bin_n))) + bin_n
     elif len(bin_m) < len(bin_n):
         bin_m = ('0' * (len(bin_n) - len(bin_m))) + bin_m
